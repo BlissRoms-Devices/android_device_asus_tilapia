@@ -22,6 +22,7 @@ PRODUCT_COPY_FILES := \
     device/asus/tilapia/fstab.grouper:root/fstab.grouper \
     device/asus/tilapia/init.recovery.tilapia.rc:root/init.recovery.grouper.rc \
     device/asus/tilapia/init.tilapia.rc:root/init.grouper.rc
+    $(LOCAL_PATH)/bootanimation/bootanimation.zip:system/media/bootanimation.zip
 
 DEVICE_PACKAGE_OVERLAYS := \
     device/asus/tilapia/overlay
@@ -36,6 +37,4 @@ $(call inherit-product, device/asus/grouper/device-common.mk)
 # inherit from the non-open-source side, if present
 $(call inherit-product-if-exists, vendor/asus/tilapia/device-vendor.mk)
 
-# BootAnimation
-PRODUCT_COPY_FILES += \ 
-	$(LOCAL_PATH)/bootanimation/bootanimation.zip:system/media/bootanimation.zip
+	
